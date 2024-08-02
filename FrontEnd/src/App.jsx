@@ -1,8 +1,11 @@
-function App() {
+import { Outlet } from "react-router-dom";
+import Navbar from "./Components/Navbar/Navbar";
 
+function App() {
   return (
     <>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
+      <Navbar />
+      <Outlet />
     </>
   );
 }
