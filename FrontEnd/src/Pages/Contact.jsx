@@ -1,7 +1,11 @@
+import Banner from "../Components/Contact/Banner";
+
 function Contact() {
   return (
-    <div>Contact</div>
-  )
+    <div>
+      <Banner />
+    </div>
+  );
 }
 
-export default Contact
+export default Contact;

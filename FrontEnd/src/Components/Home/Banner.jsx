@@ -16,7 +16,7 @@ function Banner() {
         <div>
           <Link
             to="/"
-            className="font-medium hover:text-orange-500 inl    ine-flex items-center py-1"
+            className="font-medium hover:text-orange-500 inline-flex items-center py-1"
           >
             Learn More <FaArrowRightLong className="mt-1 ml-2 text-xl" />
           </Link>

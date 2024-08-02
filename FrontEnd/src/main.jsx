@@ -7,6 +7,7 @@ import Blogs from "./Pages/Blogs.jsx";
 import About from "./Pages/About.jsx";
 import Contact from "./Pages/Contact.jsx";
 import Service from "./Pages/Service.jsx";
+import { QueryClient, QueryClientProvider } from "react-query";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -39,8 +40,14 @@ const router = createBrowserRouter([
   },
 ]);
 
+const queryClient = new QueryClient();
+
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <QueryClientProvider client={queryClient}>
+      <RouterProvider router={router}>
+        <App />
+      </RouterProvider>
+    </QueryClientProvider>
   </React.StrictMode>
 );
