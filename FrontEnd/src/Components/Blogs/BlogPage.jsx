@@ -2,6 +2,7 @@ import BlogCart from "./BlogCart";
 import { useEffect, useState } from "react";
 import Pagination from "./Pagination";
 import CategorySection from "./CategorySection";
+import SideBar from "./SideBar";
 
 function BlogPage() {
   const [data, setData] = useState([]);
@@ -48,13 +49,18 @@ function BlogPage() {
           activeCategory={activeCategory}
         />
       </div>
-      <div>
+      <div className="flex flex-col lg:flex-row gap-12 ">
         <BlogCart
           blogs={data}
           currentPage={currentPage}
           selectCategory={selectCategory}
           pageSize={pageSize}
         />
+
+        {/* SoideBar */}
+        <div>
+          <SideBar />
+        </div>
       </div>
       {/* pagination */}
       <div>

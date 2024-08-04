@@ -15,10 +15,10 @@ function Navbar() {
 
   const navItems = [
     { path: "/", name: "Home" },
-    { path: "/Blogs", name: "Blogs" },
-    { path: "/About", name: "About" },
-    { path: "/Contact", name: "Contact" },
     { path: "/Services", name: "Services" },
+    { path: "/About", name: "About" },
+    { path: "/Blogs", name: "Blogs" },
+    { path: "/Contact", name: "Contact" },
   ];
 
   return (
