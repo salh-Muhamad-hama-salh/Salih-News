@@ -1,6 +1,7 @@
 import BlogCart from "./BlogCart";
 import { useEffect, useState } from "react";
 import Pagination from "./Pagination";
+import CategorySection from "./CategorySection";
 
 function BlogPage() {
   const [data, setData] = useState([]);
@@ -31,7 +32,7 @@ function BlogPage() {
     localStorage.setItem("currentPage", pageNumber);
   };
 
-  const handleCategory = (category) => {
+  const handleCategorychange = (category) => {
     setSelectCategory(category);
     setCurrentPage(1);
     setActiveCategory(category);
@@ -40,7 +41,13 @@ function BlogPage() {
   return (
     <>
       {/* page category */}
-      <div></div>
+      <div>
+        <CategorySection
+          onSelectCategory={handleCategorychange}
+          selectCategory={selectCategory}
+          activeCategory={activeCategory}
+        />
+      </div>
       <div>
         <BlogCart
           blogs={data}

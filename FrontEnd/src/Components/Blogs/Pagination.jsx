@@ -17,7 +17,7 @@ function Pagination({ blogs, currentPage, pageSize, onPageChange }) {
   };
 
   return (
-    <ul>
+    <ul className="pagination my-8 flex-wrap gap-4">
       <li>
         <button
           onClick={() => onPageChange(currentPage - 1)}
@@ -26,7 +26,7 @@ function Pagination({ blogs, currentPage, pageSize, onPageChange }) {
           previous
         </button>
       </li>
-      <div>{renderPagination()}</div>
+      <div className="flex gap-1">{renderPagination()}</div>
       <button
         onClick={() => onPageChange(currentPage + 1)}
         disabled={currentPage === totalpage}
